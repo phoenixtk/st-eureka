@@ -1,0 +1,13 @@
+server:
+  port: 9600
+eureka:
+  client:
+    service-url:
+      #服务注册地址
+      defaultZone: http://192.168.200.28:8000/eureka/
+  instance:
+    hostname: 192.168.200.28
+    prefer-ip-address: true
+spring:
+  application:
+    name: st-discovery-consumer-client

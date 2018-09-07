@@ -1,0 +1,12 @@
+server:
+  port: 8000 #配置端口
+eureka:
+  instance:
+    hostname: 192.168.200.28  #配置主机名
+
+  client:
+    register-with-eureka: false  #表示作为注册中心，不作为服务
+    fetch-registry: false  #表示作为注册中心，不作为服务
+    service-url:
+    #服务向注册中心注册的地址
+     defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
